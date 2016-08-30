@@ -21,12 +21,7 @@ ui <- dashboardPage(skin = "red",
                                     title = "Inputs", status = "success", solidHeader = TRUE,width = 5,
                                     "Tweets Miner for Stock Markets",br(), "..........",collapsible = TRUE,br(),
                                     actionButton(inputId="act1",label = "Load new users' tweets"),
-                                    actionButton(inputId="act2",label = "Load financial time series"),
-                                    sliderInput("slider", "Slider input:", 1, 100, 50),
-                                    textInput("text", "Text input:"),
-                                    selectInput("kernel", "Choose a kernel:", 
-                                                choices = c("gaussian", "epanechnikov", "uniform", "triangular", "triweight","tricube", "biweight", "cosine"))
-                                    
+                                    actionButton(inputId="act2",label = "Load financial time series")
                                   ),
                                   box(
                                     title = "Loading users' tweets", status = "primary", solidHeader = TRUE,width = 7,
@@ -34,12 +29,11 @@ ui <- dashboardPage(skin = "red",
                                     verbatimTextOutput("act1")
                                   ),
                                   box(
-                                    title = "Summary", status = "primary", solidHeader = TRUE,width = 7,
+                                    title = "Loading financial time series", status = "primary", solidHeader = TRUE,width = 7,
                                     collapsible = TRUE,
-                                    verbatimTextOutput("summary")
+                                    column(dataTableOutput("act2"), width = 12)
                                   )
                                 )
-                        
                         
                         # Second tab content
                         #tabItem(tabName = "widgets",
@@ -48,6 +42,7 @@ ui <- dashboardPage(skin = "red",
                       )
                     )
                     
+      
 )
 
 

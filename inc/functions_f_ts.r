@@ -2,7 +2,7 @@ library("tseries")
 
 getfts=function(xts_window1=xts_window){
 fts_ready<<-0
-print("Loading financial time series")
+#print("Loading financial time series")
 date_end<<-Sys.Date()+1
 since_date<<-date_end-xts_window1
 fchartv<<-get.hist.quote(instrument = stocksmbl[1], start = since_date)$Close
@@ -19,7 +19,7 @@ data_frame_fts.xts<<-data_fts
 write.table(data.frame(date=as.character(index(data_fts)),
 coredata(data_fts)),
 file=filename_fts, row.names = FALSE)
-print("Done!")
+#print("Done!")
 }
 
 loadfts=function(xts_window1=xts_window){

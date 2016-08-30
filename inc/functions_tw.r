@@ -15,7 +15,7 @@ print(paste(i_srchstr," (",length(twts)," new tweets loaded)",sep=""))
 if(length(twts)>1){tw_append_dataframe(twts,as.character(i_srchstr))}
 data_save(data_frame_tw);data_frame_tw<<-data.frame();
 }
-print("Done!")
+#print("Done!")
 }
 
 tw_append_dataframe=function(tw,tw_srchstr)
