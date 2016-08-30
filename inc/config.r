@@ -1,9 +1,8 @@
 # Set up the list of twitter users
 tw_search_usr=c("CNNMoney","TheStreet", "FoxBusiness","SeekingAlpha", "WallstCS","themotleyfool",
-"MarketWatch","CNBC","ReutersBiz","WSJ","YahooFinance",
-"MicroFundy","chartly","MarketBeat","ReutersTV","BloombergTV","profitly","myrollingstocks",
-"BloombergNews","Stockstobuy","tradespoon","stockr","stocktwits",
-"FinancialBrand", "Option_Trading","EconomicTimes")
+                "MarketWatch","CNBC","ReutersBiz","WSJ","YahooFinance",
+                "MicroFundy")
+
 
 # Set up the list of stock symbols
 stocksmbl<-c("AAPL","YHOO", "ORCL","MSFT")

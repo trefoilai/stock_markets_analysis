@@ -3,7 +3,7 @@ data_frame_ready<<-0
 dtm_ready<<-0
 get_data_from_file()
 data_frame_tw<<-data.frame();
-print("Loading users' tweets")
+#print("Loading users' tweets")
 
 for (i_srchstr in tw_srch_usr){
 if(length(data_frame)>0){ data_frame_sbst=subset(data_frame,V3==i_srchstr)$V1   
@@ -11,7 +11,7 @@ if(length(data_frame_sbst)>0){tw_max_id<<-max(data_frame_sbst)} else {tw_max_id<
 } else{tw_max_id<-NULL}
 
 twts<-userTimeline(as.character(i_srchstr), n=n_tweets, sinceID=tw_max_id);
-print(paste("Loading tweets of the user ",i_srchstr," (",length(twts)," new tweets loaded)",sep=""))
+print(paste(i_srchstr," (",length(twts)," new tweets loaded)",sep=""))
 if(length(twts)>1){tw_append_dataframe(twts,as.character(i_srchstr))}
 data_save(data_frame_tw);data_frame_tw<<-data.frame();
 }

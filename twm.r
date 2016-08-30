@@ -20,7 +20,7 @@ source("inc/functions_tw.r")
 source("inc/functions_txt.r")
 source("inc/functions_analysis.r")
 source("inc/functions_f_ts.r")
-source("inc/functions_tcltk.r")
+#source("inc/functions_tcltk.r")
 
  
 

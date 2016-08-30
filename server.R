@@ -1,16 +1,15 @@
 server <- function(input, output) {
   histdata <- rnorm(500)
-  output$act1 <- renderText({
+  output$act1 <- renderPrint({
     getusrtweets()
   })
   
   output$plot1 <- renderPlot({
     data <- histdata[seq_len(input$slider)]
-    library(kedd)
-    plot(dkde(data,kernel = input$kernel),main=input$text)
+    hist(data)
   })
   output$summary <- renderPrint({
     data <- histdata[seq_len(input$slider)]
-    dkde(data,kernel = input$kernel)
+    summary(data)
   })
 }
