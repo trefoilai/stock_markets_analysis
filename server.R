@@ -1,6 +1,6 @@
 server <- function(input, output) {
   histdata <- rnorm(500)
-  output$act1 <- renderPrint({
+  output$act1 <- renderText({
     getusrtweets()
   })
   

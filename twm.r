@@ -15,12 +15,12 @@ access_token      <- "4599019833-uhR78hDXNAOfoSg4hHtU5nL9eQ3WXJT43Im6J4n"
 access_secret     <- "hVs8Ngl05seFrzyoNnQKtMdB58CKIJZXU7QFe8k4dfA7L"
 
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
-#source("inc/config.r")
-#source("inc/functions_tw.r")
-#source("inc/functions_txt.r")
-#source("inc/functions_analysis.r")
-#source("inc/functions_f_ts.r")
-#source("inc/functions_tcltk.r")
+source("inc/config.r")
+source("inc/functions_tw.r")
+source("inc/functions_txt.r")
+source("inc/functions_analysis.r")
+source("inc/functions_f_ts.r")
+source("inc/functions_tcltk.r")
 
  
 
