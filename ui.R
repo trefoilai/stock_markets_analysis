@@ -20,6 +20,7 @@ ui <- dashboardPage(skin = "red",
                                   box(
                                     title = "Inputs", status = "success", solidHeader = TRUE,width = 4,
                                     "Box content here", br(), "More box content",collapsible = TRUE,
+                                    actionButton(inputId="act1",label = "Load new users' tweets"),
                                     sliderInput("slider", "Slider input:", 1, 100, 50),
                                     textInput("text", "Text input:"),
                                     selectInput("kernel", "Choose a kernel:", 
