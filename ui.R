@@ -18,9 +18,10 @@ ui <- dashboardPage(skin = "red",
                         tabItem(tabName = "dashboard",
                                 fluidRow(
                                   box(
-                                    title = "Inputs", status = "success", solidHeader = TRUE,width = 4,
-                                    "Box content here", br(), "More box content",collapsible = TRUE,
-                                    actionButton(inputId="act1",label = "Load new users' tweets"),
+                                    title = "Inputs", status = "success", solidHeader = TRUE,width = 6,
+                                    "Tweets Miner for Stock Markets",br(), "..........",collapsible = TRUE,br(),
+                                    actionButton(inputId="act1",label = "Load new users' tweets",height = 45),
+                                    actionButton(inputId="act2",label = "Load financial time series",height = 450),
                                     sliderInput("slider", "Slider input:", 1, 100, 50),
                                     textInput("text", "Text input:"),
                                     selectInput("kernel", "Choose a kernel:", 
@@ -28,12 +29,12 @@ ui <- dashboardPage(skin = "red",
                                     
                                   ),
                                   box(
-                                    title = "Histogram", status = "primary", solidHeader = TRUE,width = 8,
+                                    title = "Loading users' tweets", status = "primary", solidHeader = TRUE,width = 6,
                                     collapsible = TRUE,
-                                    plotOutput("plot1", height = 450)
+                                    verbatimTextOutput("act1")
                                   ),
                                   box(
-                                    title = "Summary", status = "primary", solidHeader = TRUE,width = 8,
+                                    title = "Summary", status = "primary", solidHeader = TRUE,width = 6,
                                     collapsible = TRUE,
                                     verbatimTextOutput("summary")
                                   )
