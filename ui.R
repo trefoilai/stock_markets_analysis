@@ -9,7 +9,7 @@ ui <- dashboardPage(skin = "red",
                     
                     dashboardSidebar(
                       sidebarMenu(
-                        menuItem("Tweets", tabName = "tab1", icon = icon("sign-in")),
+                        menuItem("Input data", tabName = "tab1", icon = icon("file")),
                         menuItem("Data explorer", tabName = "tab2", icon = icon("table"))
                       )
                     ),
