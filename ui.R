@@ -9,8 +9,8 @@ ui <- dashboardPage(skin = "red",
                     
                     dashboardSidebar(
                       sidebarMenu(
-                        menuItem("Tweets", tabName = "tab1", icon = icon("bar-chart-o")),
-                        menuItem("Data explorer", tabName = "tab2", icon = icon("th"))
+                        menuItem("Tweets", tabName = "tab1", icon = icon("sign-in")),
+                        menuItem("Data explorer", tabName = "tab2", icon = icon("table"))
                       )
                     ),
                     dashboardBody(
