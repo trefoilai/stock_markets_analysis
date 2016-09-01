@@ -3,9 +3,10 @@ library(shiny)
 library(shinydashboard)
 
 
-ui <- dashboardPage(skin = "red",
+ui <- dashboardPage(skin = "blue",
                     dashboardHeader(title = "Tweets Miner for Stock Markets",
-                                    titleWidth = 320),
+                                    titleWidth = 320,
+                                    dropdownMenuOutput("messageMenu")),
                     
                     dashboardSidebar(
                       sidebarMenu(
@@ -13,6 +14,7 @@ ui <- dashboardPage(skin = "red",
                         menuItem("Data explorer", tabName = "tab2", icon = icon("table"))
                       )
                     ),
+                    
                     dashboardBody(
                       tabItems(
                         # First tab content

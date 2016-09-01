@@ -21,4 +21,24 @@ server <- function(input, output) {
    output$act2 <- renderDataTable({
     v2$data2
    })
+   
+   ##
+   messageData <- data.frame(
+     from = c("Admininstrator", "New User", "Support"),
+     message = c(
+       "Sales are steady this month.",
+       "How do I register?",
+       "The new server is ready."
+     ),
+     stringsAsFactors = FALSE
+   )
+   output$messageMenu <- renderMenu({
+     # Code to generate each of the messageItems here, in a list. messageData
+     # is a data frame with two columns, 'from' and 'message'.
+     # Also add on slider value to the message content, so that messages update.
+       msgs <- apply(messageData, 1, function(row) {
+         messageItem(from = row[["from"]], message = row[["message"]])
+       })
+     dropdownMenu(type = "messages", .list = msgs)
+   })
 }
