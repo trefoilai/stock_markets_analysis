@@ -1,4 +1,4 @@
-library("tseries")
+
 
 getfts=function(xts_window1=xts_window){
 fts_ready<<-0

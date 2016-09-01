@@ -42,7 +42,6 @@ ui <- dashboardPage(skin = "red",
                       )
                     )
                     
-      
 )
 
 

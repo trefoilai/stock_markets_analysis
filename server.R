@@ -1,6 +1,5 @@
 server <- function(input, output) {
 
-  
   ##
   v1 <- reactiveValues(data1 = "")
   observeEvent(input$act1, {
