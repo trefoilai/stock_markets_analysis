@@ -35,12 +35,12 @@ ui <- dashboardPage(skin = "blue",
                                   box(
                                     title = "Loading users' tweets", status = "primary", solidHeader = TRUE,width = 6,
                                     collapsible = TRUE,
-                                    verbatimTextOutput("act1")
+                                    verbatimTextOutput("out1")
                                   ),
                                   box(
                                     title = "Loading financial time series", status = "primary", solidHeader = TRUE,width = 6,
                                     collapsible = TRUE,
-                                    column(dataTableOutput("act2"), width = 12)
+                                    column(dataTableOutput("out2"), width = 12)
                                   )
                                 )
                         )
